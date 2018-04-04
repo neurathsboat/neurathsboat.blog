@@ -2,3 +2,7 @@
 	path = themes/vk-academic
 	url = https://github.com/vkehayas/hugo-academic
 	branch = master
+[submodule "content/post"]
+	path = content/post
+	url = git@gitlab.com:vkehayas-private/blog-posts.git
+	branch = master
