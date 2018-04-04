@@ -1,0 +1,4 @@
+[submodule "themes/vk-academic"]
+	path = themes/vk-academic
+	url = https://github.com/vkehayas/hugo-academic
+	branch = master
