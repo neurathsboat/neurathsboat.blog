@@ -8,7 +8,7 @@ before_script:
   - apk update
   - apk add rsync git
   - git submodule foreach git pull origin master
-  - rsync -ahvz staticman-comments/data/comments/* data/comments/
+  - rsync -ahvz staticman-comments/data/* data/
 
 test:
   script:
