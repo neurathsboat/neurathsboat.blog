@@ -6,3 +6,7 @@
 	path = content/post
 	url = git@gitlab.com:vkehayas-private/blog-posts.git
 	branch = master
+[submodule "staticman-comments"]
+	path = staticman-comments
+	url = https://github.com/vkehayas/staticman-comments
+	branch = master
