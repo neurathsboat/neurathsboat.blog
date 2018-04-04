@@ -4,7 +4,7 @@
 	branch = master
 [submodule "content/post"]
 	path = content/post
-	url = git@gitlab.com:vkehayas-private/blog-posts.git
+	url = ../../vkehayas-private/blog-posts
 	branch = master
 [submodule "staticman-comments"]
 	path = staticman-comments
