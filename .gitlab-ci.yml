@@ -4,16 +4,16 @@ image: registry.gitlab.com/pages/hugo:latest
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
   
+before_script:
+  - apk update
+  - apk add rsync git curl curl-dev
+  - git submodule foreach git pull origin master
+  - rsync -ahvz staticman-comments/data/* data/
+
 trigger_build:
   stage: deploy
   script:
     - "curl -X POST -F token=544c65886178fa9103761e4a472d46 -F ref=master https://gitlab.com/api/v4/projects/5969147/trigger/pipeline"
-  
-before_script:
-  - apk update
-  - apk add rsync git
-  - git submodule foreach git pull origin master
-  - rsync -ahvz staticman-comments/data/* data/
 
 test:
   script:
