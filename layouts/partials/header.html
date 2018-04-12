@@ -40,17 +40,9 @@
     {{ $scr.Set "highlight_enabled" .Site.Params.highlight }}
   {{ end }}
   {{ if $scr.Get "highlight_enabled" }}
-    {{ $v := $sri.js.highlight.version }}
-    {{ with .Site.Params.highlight_style }}
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ $v }}/styles/{{ . }}.min.css">
-    {{ else }}
-      {{ if eq ($scr.Get "light") true }}
-        <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight.min.css">
-      {{ else }}
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ $v }}/styles/dracula.min.css">
-      {{ end }}
-    {{ end }}
+    <link href="/css/prism.css" rel="stylesheet" />
   {{ end }}
+  
   {{ if not .Site.Params.disable_sri }}
   {{ printf "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/%s/css/bootstrap.min.css\" integrity=\"%s\" crossorigin=\"anonymous\">" $sri.css.bootstrap.version $sri.css.bootstrap.sri | safeHTML }}
   {{ printf "<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/academicons/%s/css/academicons.min.css\" integrity=\"%s\" crossorigin=\"anonymous\">" $sri.css.academicons.version $sri.css.academicons.sri | safeHTML }}

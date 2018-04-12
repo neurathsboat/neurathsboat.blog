@@ -14,7 +14,7 @@ copyright = "&#169; Vassilis Kehayas 2018"
 
 theme = "vk-academic"
 enableEmoji = true
-footnotereturnlinkcontents = "<sup>^</sup>"
+footnotereturnlinkcontents = "↥"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 paginate = 10
@@ -156,16 +156,16 @@ defaultContentLanguageInSubdir = false
   #   For more info on the highlighting options, see:
   #   https://sourcethemes.com/academic/post/writing-markdown-latex/#highlighting-options
   highlight = true
-  highlight_languages = ["R", "matlab"]
-  highlight_style = "googlecode"
+  highlight_languages = ["r", "matlab"]
+  #highlight_style = ""
 
   # Enable native social sharing buttons?
   sharing = true
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = []
-  custom_js  = []
+  custom_css = ["prism.css"]
+  custom_js  = ["prism.js"]
 
   # Publication types.
   #   Used to categorize publications.
@@ -314,7 +314,6 @@ defaultContentLanguageInSubdir = false
 [taxonomies]
   tag = "tags"
   category = "categories"
-  publication_type = "publication_types"
 
 # Languages
 #   Create a [languages.X] block for each language you want, where X is the language ID.
