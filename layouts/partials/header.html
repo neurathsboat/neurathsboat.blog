@@ -82,8 +82,6 @@
     {{ end }}
   {{ end }}
   
-  <script src="//cdn.plot.ly/plotly-latest.min.js"></script>
-
   {{ if or .Site.RSSLink .RSSLink }}
   <link rel="alternate" href="{{ .RSSLink | default .Site.RSSLink  }}" type="application/rss+xml" title="{{ .Site.Title }}">
   <link rel="feed" href="{{ .RSSLink | default .Site.RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}">
@@ -91,18 +89,7 @@
 
   <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
   <link rel="icon" type="image/png" href="{{ "/img/icon-192.png" | relURL }}">
-  <link rel="apple-touch-icon" type="image/png" href="{{ "/img/icon-192.png" | relURL }}">
-
-  <script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Blog",
-    "url": "https://neurathsboat.blog",
-    "image": "https://neurathsboat.blog/img/icon-192.png"
-  }
-  </script>
-  
-  
+  <link rel="apple-touch-icon" type="image/png" href="{{ "/img/icon-192.png" | relURL }}">  
 
   <link rel="canonical" href="{{ .Permalink }}">
 
