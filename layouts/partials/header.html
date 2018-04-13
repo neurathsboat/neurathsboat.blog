@@ -31,6 +31,7 @@
   {{ if ne ($scr.Get "primary") "#fff" }}
   <meta name="theme-color" content="{{ $scr.Get "primary" }}">
   {{ end }}
+  
   {{/* Default to enabling highlighting, but allow the user to override it in .Params or .Site.Params.
        Use $scr to store "highlight_enabled", so that we can read it again in footer.html. */}}
   {{ $scr.Set "highlight_enabled" true }}
@@ -39,8 +40,40 @@
   {{ else if isset .Site.Params "highlight" }}
     {{ $scr.Set "highlight_enabled" .Site.Params.highlight }}
   {{ end }}
+  
+  {{ $scr.Set "highlight_engine" "highlight.js" }}
+  {{ if isset .Params "highlight_engine" }}
+    {{ $scr.Set "highlight_engine" .Params.highlight_engine }}
+  {{ else if isset .Site.Params "highlight_engine" }}
+    {{ $scr.Set "highlight_engine" .Site.Params.highlight_engine }}
+  {{ end }}
+  
   {{ if $scr.Get "highlight_enabled" }}
-    <link href="/css/prism.css" rel="stylesheet" />
+    
+    {{ if eq ($scr.Get "highlight_engine") "highlight.js"}}
+  
+      {{ $v := $sri.js.highlight.version }}
+        {{ with .Site.Params.highlight_style }}
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ $v }}/styles/{{ . }}.min.css">
+      {{ else }}
+        {{ if eq ($scr.Get "light") true }}
+          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ $v }}/styles/github.min.css">
+        {{ else }}
+          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/{{ $v }}/styles/dracula.min.css">
+        {{ end }}
+      {{ end }}
+      
+    {{ else if eq ($scr.Get "highlight_engine") "prism"}}
+    
+      {{ if eq ($scr.Get "light") true }}
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css">
+      {{ else }}
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism-dark.min.css">
+      {{ end }}
+    
+    {{ end }}
+    
+      
   {{ end }}
   
   {{ if not .Site.Params.disable_sri }}

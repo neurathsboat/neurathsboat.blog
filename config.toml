@@ -156,6 +156,7 @@ defaultContentLanguageInSubdir = false
   #   For more info on the highlighting options, see:
   #   https://sourcethemes.com/academic/post/writing-markdown-latex/#highlighting-options
   highlight = true
+  highlight_engine = "prism" # Possible options: "prism", "highlight.js"
   highlight_languages = ["r", "matlab"]
   #highlight_style = ""
 
@@ -164,8 +165,8 @@ defaultContentLanguageInSubdir = false
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = ["prism.css"]
-  custom_js  = ["prism.js"]
+  custom_css = []
+  custom_js  = []
 
   # Publication types.
   #   Used to categorize publications.

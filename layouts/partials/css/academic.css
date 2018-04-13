@@ -128,6 +128,12 @@ video {
   display: block;
 }
 
+video {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
 .img-responsive {
   /* Extend Bootstrap declaration with centering. */
   margin: 0 auto;
@@ -156,7 +162,99 @@ figcaption h4 {
   margin: 0;
 }
 
+/* Code highlighting */
+pre {
+	border-style: none;
+  color: #202020;
+}
 
+code {
+	font-size: 0.85em;
+	color: #000;
+}
+
+pre,
+code {
+	font-family: '{{.Get "mono_font"}}' , monospace;
+	background-color: rgb(250, 250, 250);
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: none;
+	font-family: '{{.Get "mono_font"}}' , monospace;
+	font-size: 0.85em;
+}
+
+
+/* Code blocks */
+
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background-color: #efefef;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+	color: #000
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #404040;
+}
+
+.token.punctuation {
+	color: #404080;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #4080e1;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #bf2020;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  background: none;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #2060e1;
+}
+
+.token.function,
+.token.class-name {
+	color: #208020;
+}
+
+/* End code highlighting */
 
 hr {
   border: 0;
@@ -450,10 +548,10 @@ a[data-fancybox] img {
 
 #profile ul.network-icon {
   display: inline-flex;
-  justify-content: center;
-  width: 200px;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 200px;
   list-style: none;
   padding: 0;
   margin-top: 30px;
