@@ -14,13 +14,13 @@ before_script:
 
 test:
   script:
-  - hugo --buildFuture
+  - hugo
   except:
   - master
 
 pages:
   script:
-  - hugo --buildFuture
+  - hugo
   artifacts:
     paths:
     - public
