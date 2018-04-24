@@ -11,7 +11,7 @@
     "@id": "{{ .Permalink }}"
   },
   "headline": "{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}",
-  "image": {{- with .Params.header.image }}"{{ printf "/img/%s" . | absURL }}"{{end}},
+  "image": {{- with .Params.header.image }}"{{ printf "/img/%s" . | absURL }}"{{ end }},
   {{ if .IsPage }}
   {{ if not .PublishDate.IsZero }}"datePublished": "{{ .PublishDate.Format $.Site.Params.date_format | safeHTML }}",
   {{ else if not .Date.IsZero }}"datePublished": "{{ .Date.Format $.Site.Params.date_format | safeHTML }}",{{ end }}
@@ -21,7 +21,7 @@
   {{ end }}
   "author": {
     "@type": "Person",
-    "name": "Vassilis Kehayas"
+    "name": " {{ .Site.Params.name }}"
   },
   "publisher": {
    "@type": "Organization",
