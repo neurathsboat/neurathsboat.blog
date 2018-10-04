@@ -24,7 +24,11 @@ googleAnalytics = "UA-116312614-1"
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
+hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
+
+# Get last modified date for content from Git?
+enableGitInfo = true
 
 # Enable comments by entering your Disqus shortname
 #disqusShortname = ""
@@ -163,9 +167,15 @@ branch = "master"
   # Enable native social sharing buttons?
   sharing = true
 
+  # Privacy pack
+  #   Show a cookie consent message to visitors
+  #   Anonymize IP in Google Analytics (if enabled)
+  privacy_pack = true
+  cookie_consent = false
+
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = ["code-highlighting.css"]
+  custom_css = ["code-highlighting.css", "custom.css"]
   custom_js  = []
 
   # Publication types.
