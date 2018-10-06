@@ -1,21 +1,28 @@
 <footer class="site-footer">
   <div class="container">
+
+    {{ with .Site.GetPage "page" "privacy.md" }}
     <p class="powered-by">
-      
+      {{ printf "<a href=\"%s\">%s</a>" .Permalink .Title | safeHTML }}
+    </p>
+    {{ end }}
+
+    <p class="powered-by">
+
       {{ with .Site.Copyright }}{{ . | markdownify}} {{ end }}
       <center>
         <sub>
-        <a rel="license" 
+        <a rel="license"
         href="https://p2pfoundation.net/Peer_Production_License">
-        <img alt="Peer Production Licence" 
+        <img alt="Peer Production Licence"
         style="border-width:0"
         src="https://commonstransition.org/wp-content/uploads/2014/12/ppl-v6-bn.png" />
         </a>
         All content in
-        <span xmlns:dct="http://purl.org/dc/terms/" 
+        <span xmlns:dct="http://purl.org/dc/terms/"
               property="dct:title">
               neurathsboat.blog
-        </span> 
+        </span>
         is licensed under a
         <br />
         <a rel="license"
@@ -25,9 +32,9 @@
         <br />
         unless otherwise stated.
         <br />
-        Based on a work at 
-        <a xmlns:dct="http://purl.org/dc/terms/" 
-        href="https://gitlab.com/vkehayas/neurathsboat.blog" 
+        Based on a work at
+        <a xmlns:dct="http://purl.org/dc/terms/"
+        href="https://gitlab.com/vkehayas/neurathsboat.blog"
         rel="dct:source">https://gitlab.com/vkehayas/neurathsboat.blog
         </a>.
         <br />
