@@ -16,7 +16,7 @@ weight = 80
 
 # About
 For information about this blog see the
-[introduction to Neurath's boat]({{< ref "post/neuraths-boat.md" >}}).
+[introduction to Neurath's boat]({{< ref "/post/neuraths-boat.md" >}}).
 
 All contents of this site can be found in
 [a git repository](https://gitlab.com/vkehayas/neurathsboat.blog).
