@@ -75,7 +75,7 @@ branch = "master"
 
   # Your details.
   name = "Vassilis Kehayas"
-  role = ""
+  role = "A blog about science"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
