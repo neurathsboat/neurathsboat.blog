@@ -2,7 +2,7 @@
 # Hero widget.
 widget = "hero"
 active = false
-date = 2017-10-15
+date = 2018-10-07
 
 title = "Academic"
 
