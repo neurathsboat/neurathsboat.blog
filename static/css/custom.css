@@ -3,11 +3,9 @@ html {
   font-family: '{{ .Get "body_font" }}', Georgia, Helvetica, sans-serif;
 }
 
-
 body {
   text-align: justify;
 }
-
 
 /* Navigation bar text */
 .navbar-default {
