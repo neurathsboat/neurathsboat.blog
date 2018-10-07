@@ -44,6 +44,10 @@ summary {
   width: 200px;
 }
 
+#profile .network-icon li:last-of-type {
+  margin-right: 10px;
+}
+
 .article-style img,
 .article-style video {
   box-shadow: 5px 5px 10px 0px #bfbfbf, 0px 0px 0px #bfbfbf, 0px 0px 0px #bfbfbf, 0px 0px 0px #bfbfbf;
