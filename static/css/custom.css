@@ -51,6 +51,49 @@ summary {
   padding-right: 0;
 }
 
+div.article-metadata {
+  font-size: 18px;
+}
+
+h3 {
+  margin-top: 1rem;
+}
+
+ul.share {
+  padding-right: 1em;
+}
+
+ul.share li a {
+  background-color: #ffffff;
+  border-radius: unset;
+  padding: 0.5em;
+  padding-top: 0em;
+}
+
+.fa-twitter-square:before {
+    color: #00aced;
+  }
+
+.fa-facebook-square:before {
+    color: #3b5998;
+  }
+
+.fa-linkedin-square:before {
+    color: #0077B5;
+  }
+
+ul.share li a.email .fa-envelope:before {
+  color: #488ef1;
+}
+
+div.share-buttons-post {
+  float: left;
+  padding-top: 0.35em;
+}
+
+div.tags-li-detailed {
+  margin-bottom: 1.15em;
+}
 
 /*************************************************
  *  Staticman comment section and form
