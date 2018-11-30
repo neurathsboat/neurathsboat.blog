@@ -99,6 +99,10 @@ div.tags-li-detailed {
   margin-bottom: 1.15em;
 }
 
+.site-footer {
+  background-color: #0E1010;
+}
+
 /*************************************************
  *  Staticman comment section and form
  **************************************************/
