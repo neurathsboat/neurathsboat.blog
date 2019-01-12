@@ -1,12 +1,30 @@
-[submodule "themes/vk-academic"]
-	path = themes/vk-academic
-	url = https://github.com/vkehayas/hugo-academic
-	branch = master
-[submodule "content/post"]
-	path = content/post
-	url = ../../vkehayas-private/blog-posts
+[submodule "themes/academic"]
+	path = themes/academic
+	url = https://github.com/gcushen/hugo-academic
 	branch = master
 [submodule "staticman-comments"]
 	path = staticman-comments
 	url = https://github.com/vkehayas/staticman-comments
+	branch = master
+
+# Posts
+[submodule "content/post/neuraths-boat"]
+	path = content/post/neuraths-boat
+	url = ../../neurathsboat.blog/posts/neuraths-boat
+	branch = master
+[submodule "content/post/procrustes"]
+	path = content/post/procrustes
+	url = ../../neurathsboat.blog/posts/procrustes
+	branch = master
+[submodule "content/post/glmm-theory"]
+	path = content/post/glmm-theory
+	url = ../../neurathsboat.blog/posts/glmm-theory
+	branch = master
+[submodule "content/post/glmm-examples"]
+	path = content/post/glmm-examples
+	url = ../../neurathsboat.blog/posts/glmm-examples
+	branch = master
+[submodule "content/post/scanimage"]
+	path = content/post/scanimage
+	url = ../../neurathsboat.blog/posts/scanimage
 	branch = master

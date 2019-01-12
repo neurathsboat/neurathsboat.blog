@@ -8,8 +8,46 @@ body {
 }
 
 /* Navigation bar text */
-.navbar-default {
+.navbar-light {
   font-family: '{{ .Get "nav_font" }}',Georgia,Utopia,Charter,serif;
+  transition: top 0.2s ease-in-out;
+}
+
+.navbar {
+  padding: 0px;
+}
+
+.navbar-light .navbar-toggle {
+  margin-top: 13.5px;
+}
+
+.navbar-brand img {
+  max-height: 32px;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .navbar-brand img {
+    max-height: 24px;
+  }
+
+}
+
+.navbar-collapse {
+  text-align: right;
+  padding-right: 0.8em;
+}
+
+.d-xl-block {
+  display: none !important;
+}
+
+.d-xl-none {
+  display: block !important;
+}
+
+.article-container {
+  margin-top: 2em;
 }
 
 /* Headings */
@@ -63,10 +101,6 @@ h3 {
   margin-top: 1rem;
 }
 
-ul.share {
-  padding-right: 1em;
-}
-
 ul.share li a {
   background-color: #ffffff;
   border-radius: unset;
@@ -74,38 +108,162 @@ ul.share li a {
   padding-top: 0em;
 }
 
-.fa-twitter-square:before {
-    color: #00aced;
-  }
+.fab.fa-twitter-square:before {
+  color: #00aced;
+}
 
-.fa-facebook-square:before {
-    color: #3b5998;
-  }
+.fab.fa-facebook-square:before {
+  color: #3b5998;
+}
 
-.fa-linkedin-square:before {
-    color: #0077B5;
-  }
+.fab.fa-linkedin:before {
+  color: #0077B5;
+}
 
-ul.share li a.email .fa-envelope:before {
+.fas {
+  font-weight: normal;
+}
+
+.fab {
+  font-weight: 900;
+}
+
+ul.share li a.email .fas.fa-envelope-square:before {
   color: #488ef1;
 }
 
-div.share-buttons-post {
+div.share-box {
   float: left;
-  padding-top: 0.35em;
+  margin-top: 1em;
+  width: 33%;
 }
 
 div.tags-li-detailed {
   margin-bottom: 1.15em;
 }
 
-.site-footer {
+.post_doi img {
+  height: 22px;
+  margin-top: 0.3rem;
+}
+
+.fab.fa-gitlab.gitlab-source {
+  color: #548;
+}
+
+.source-button {
+  float: right;
+  padding-top: 1.5em;
+  width: 67%;
+  text-align: right;
+}
+
+@media only screen and (max-width: 390px) {
+
+  .source-button {
+    padding-top: 3.7em;
+  }
+
+}
+
+@media only screen and (max-width: 721px) and (min-width: 584px) {
+
+  .source-button {
+    padding-top: 3.3em;
+  }
+
+}
+
+.doc-interact {
+  font-size: 1.25em;
+  overflow: auto;
+  border-bottom-style: solid;
+  border-bottom-width: 0.1em;
+  border-bottom-color: #8080802e;
+  float: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: -webkit-fill-available;
+  columns: 2;
+}
+
+.doc-interact .badge.badge-light {
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+  box-shadow: 2px 2px 1px 0px #bfbfbf, 0px 0px 0px #bfbfbf, 0px 0px 0px #bfbfbf, 0px 0px 0px #bfbfbf;
+}
+
+blockquote {
+  padding: .5rem 2.5rem;
+}
+
+.container.footer-container {
   background-color: #0E1010;
+  max-width: 100%;
+  padding-bottom: 2em;
+}
+
+.site-footer {
+  color: #899596;
+}
+
+.float-right {
+  padding-right: 2em;
+}
+
+.site-footer, footer a#back_to_top i {
+color: #899596;
+}
+
+kbd {
+  background-color: #464e56;
+}
+
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.footnotes a {
+  display: block;
+  overflow: auto;
+  white-space: nowrap;
+  column-fill: auto;
+  width: 180%;
+}
+
+.footnotes li {
+  -webkit-column-count: 2;
+   -moz-column-count: 2;
+        column-count: 2;
+}
+
+a.footnote-return {
+  float: right;
+  text-align: right;
+  column-fill: auto;
+  width: 110%
+}
+
+/* a.footnote-return {
+  padding-left: 5em;
+} */
+
+mjx-block {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.article-tags {
+  text-align: left;
 }
 
 /*************************************************
- *  Staticman comment section and form
- **************************************************/
+*  Staticman comment section and form
+**************************************************/
 
 .post-comments {
   margin-top: 60px;
@@ -174,8 +332,8 @@ div.tags-li-detailed {
 }
 
 /*************************************************
- *  Staticman comment submission confirmation dialog
- **************************************************/
+*  Staticman comment submission confirmation dialog
+**************************************************/
 
 .dialog {
   display: none;
@@ -199,8 +357,8 @@ div.tags-li-detailed {
 }
 
 /*************************************************
- *  Notify me of new comments checkbox
- **************************************************/
+*  Notify me of new comments checkbox
+**************************************************/
 
 input[type=checkbox].checkbox {
   display: none;
@@ -239,23 +397,4 @@ input[type=checkbox].checkbox {
   left: 1px;
   font-family: sans-serif;
   text-align: center;
-}
-
-
-.navbar-default .navbar-toggle {
-    margin-top: 13.5px;
-}
-
-.navbar-brand img {
-  max-height: 32px;
-  margin-top: 9px;
-}
-
-@media screen and (max-width: 1200px) {
-
-  .navbar-brand img {
-    max-height: 24px;
-    margin-top: 13px;
-  }
-
 }

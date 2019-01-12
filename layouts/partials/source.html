@@ -1,0 +1,28 @@
+<div class="doc-interact">
+
+  {{ partial "share.html" . }}
+
+    <div class="source-button">
+
+      {{ if .Params.sourceFile}}
+
+      <a class="badge badge-light" href="{{ .Site.Params.postsSourceURL }}{{ .File.ContentBaseName }}/edit/master/{{ .Params.sourceFile}}" target="_blank" >
+        <i class="fab fa-gitlab gitlab-source"></i>
+        Edit
+      </a>
+
+      <a class="badge badge-light" href="{{ .Site.Params.postsSourceURL }}{{ .File.ContentBaseName }}/commits/master/{{ .Params.sourceFile}}" target="_blank" >
+        <i class="fab fa-gitlab gitlab-source"></i>
+        File History
+      </a>
+
+      <a class="badge badge-light" href="{{ .Site.Params.postsSourceURL }}{{ .File.ContentBaseName }}" target="_blank" >
+        <i class="fab fa-gitlab gitlab-source"></i>
+        View Source
+      </a>
+
+      {{ end }}
+
+    </div>
+
+</div>
