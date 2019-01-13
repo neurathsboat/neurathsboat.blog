@@ -1,0 +1,20 @@
+# Theme metadata
+name = "Default"
+
+# Is theme light or dark?
+light = true
+
+# Primary
+primary = "#4060e0"
+primary_light = "#6680CC"
+primary_dark = "#6A83E7"
+
+# Menu
+menu_primary = "#EDEDED"
+menu_text = "#404040"
+menu_text_active = "#8080E1"
+menu_title = "#202020"
+
+# Home sections
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "rgb(250, 250, 250)"

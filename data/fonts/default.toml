@@ -1,0 +1,15 @@
+# Font style metadata
+name = "Default"
+
+# Optional Google font URL
+google_fonts = ""
+
+# Font families
+heading_font = "Tex Gyre Schola"
+body_font = "Tex Gyre Schola"
+nav_font = "Tex Gyre Schola"
+mono_font = "Liberation Mono"
+
+# Font size
+font_size = "20"
+font_size_small = "16"
