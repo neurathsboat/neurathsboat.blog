@@ -12,5 +12,5 @@ hasPlotly = false
 
 This website does not use any cookies.
 If you detect third-party cookies being set while browsing our website please
-[report it to us](https://gitlab.com/vkehayas/neurathsboat.blog/issues/new?issue%5Bassignee_id%5D=&issue%5Bmilestone_id%5D=)
+[report it to us](https://gitlab.com/neurathsboat.blog/neurathsboat.blog/issues/new?issue%5Bassignee_id%5D=&issue%5Bmilestone_id%5D=)
 so we can prevent their creation.

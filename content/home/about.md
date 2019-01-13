@@ -21,7 +21,7 @@ For information about this blog see the
 [introduction to Neurath's boat]({{< ref "/post/neuraths-boat" >}}).
 
 All contents of this site can be found in
-[a git repository](https://gitlab.com/vkehayas/neurathsboat.blog).
+[a git repository](https://gitlab.com/neurathsboat.blog/neurathsboat.blog).
 Feel free to open an issue and/or send a merge request if you would like to
 contribute!
 
