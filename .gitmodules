@@ -10,21 +10,21 @@
 # Posts
 [submodule "content/post/neuraths-boat"]
 	path = content/post/neuraths-boat
-	url = ../../neurathsboat.blog/posts/neuraths-boat
+	url = ../posts/neuraths-boat
 	branch = master
 [submodule "content/post/procrustes"]
 	path = content/post/procrustes
-	url = ../../neurathsboat.blog/posts/procrustes
+	url = ../posts/procrustes
 	branch = master
 [submodule "content/post/glmm-theory"]
 	path = content/post/glmm-theory
-	url = ../../neurathsboat.blog/posts/glmm-theory
+	url = ../posts/glmm-theory
 	branch = master
 [submodule "content/post/glmm-examples"]
 	path = content/post/glmm-examples
-	url = ../../neurathsboat.blog/posts/glmm-examples
+	url = ../posts/glmm-examples
 	branch = master
 [submodule "content/post/scanimage"]
 	path = content/post/scanimage
-	url = ../../neurathsboat.blog/posts/scanimage
+	url = ../posts/scanimage
 	branch = master
