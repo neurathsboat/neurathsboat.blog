@@ -108,6 +108,10 @@ ul.share li a {
   padding-top: 0em;
 }
 
+ul.share li i {
+  margin-bottom: 5px;
+}
+
 .fab.fa-twitter-square:before {
   color: #00aced;
 }
