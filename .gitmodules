@@ -28,3 +28,7 @@
 	path = content/post/scanimage
 	url = ../posts/scanimage
 	branch = master
+[submodule "content/post/git-intro"]
+	path = content/post/git-intro
+	url = ../posts/git-intro
+	branch = master
