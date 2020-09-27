@@ -1,6 +1,6 @@
 
 html {
-  font-family: '{{ .Get "body_font" }}', Georgia, Helvetica, sans-serif;
+  font-family: '{{ .Get "body_font" }}', Georgia, FreeSerif, Helvetica, sans-serif;
 }
 
 body {
