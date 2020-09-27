@@ -25,3 +25,4 @@ git clone --recurse-submodules -j8 git@gitlab.com:neurathsboat.blog/neurathsboat
         url = ../posts/neuraths-boat
         branch = master
 ```
+- Add a pipeline trigger through a webhook in the post repository in gitlab.com
