@@ -239,31 +239,6 @@ table {
   white-space: nowrap;
 }
 
-.footnotes a {
-  display: block;
-  overflow: auto;
-  white-space: nowrap;
-  column-fill: auto;
-  width: 180%;
-}
-
-.footnotes li {
-  -webkit-column-count: 2;
-   -moz-column-count: 2;
-        column-count: 2;
-}
-
-a.footnote-return {
-  float: right;
-  text-align: right;
-  column-fill: auto;
-  width: 110%
-}
-
-/* a.footnote-return {
-  padding-left: 5em;
-} */
-
 mjx-block {
   overflow: auto;
   white-space: nowrap;
