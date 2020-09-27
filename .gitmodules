@@ -32,3 +32,7 @@
 	path = content/post/git-intro
 	url = ../posts/git-intro
 	branch = master
+[submodule "content/post/probability-theory"]
+	path = content/post/probability-theory
+	url = ../posts/probability-theory
+	branch = master
