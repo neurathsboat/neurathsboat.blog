@@ -196,7 +196,7 @@ branch = "master"
 
   # Link custom CSS and JS assets
   #   (relative to /static/css and /static/js respectively)
-  custom_css = ["code-highlighting.css", "custom.css", "fa541.css"]
+  custom_css = ["code-highlighting.css", "custom.css", "fa541.css", "klaro.css"]
   custom_js  = ["fix-toc.js", "fadeNav.js"]
 
   # Publication types.
