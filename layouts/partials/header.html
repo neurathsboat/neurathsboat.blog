@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Source Themes Academic {{ .Site.Data.academic.version }}">
+  <script defer type="application/javascript" src="/js/config.js"></script>
+
+<script defer type="application/javascript" src="https://cdn.kiprotect.com/klaro/latest/klaro-no-css.js" data-config="klaroConfig" data-style-prefix="klaro"></script>
+
   {{ .Hugo.Generator }}
   {{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
 
@@ -116,12 +120,13 @@
   <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
   {{ end }}
 
-  {{ if not .Site.IsServer }}
   {{ if .Site.GoogleAnalytics }}
-    <script>
+    <script type="text/plain"
+    data-type="application/javascript"
+    data-name="googleAnalytics">
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
       ga('create', '{{ .Site.GoogleAnalytics }}', 'auto');
-      {{ if .Site.Params.privacy_pack }}ga('set', 'anonymizeIp', true);{{ end }}
+      ga('set', 'anonymizeIp', true);
       ga('require', 'eventTracker');
       ga('require', 'outboundLinkTracker');
       ga('require', 'urlChangeTracker');
@@ -131,7 +136,6 @@
     {{ if ($scr.Get "use_cdn") }}
     {{ printf "<script async src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.autotrack.url $js.autotrack.version) $js.autotrack.sri | safeHTML }}
     {{ end }}
-  {{ end }}
   {{ end }}
 
   {{ if or .Site.RSSLink .RSSLink }}
