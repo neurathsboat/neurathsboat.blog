@@ -192,7 +192,6 @@ div.tags-li-detailed {
   border-bottom-style: solid;
   border-bottom-width: 0.1em;
   border-bottom-color: #8080802e;
-  float: left;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
