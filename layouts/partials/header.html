@@ -88,9 +88,9 @@
       {{ else if eq ($scr.Get "highlight_engine") "prism"}}
 
         {{ if eq ($scr.Get "light") true }}
-          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css">
+          <link async defer rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css">
         {{ else }}
-          <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism-dark.min.css">
+          <link async defer rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism-dark.min.css">
         {{ end }}
 
       {{ end }}
