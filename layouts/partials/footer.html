@@ -47,7 +47,7 @@
 
   {{/* LaTeX math rendering. */}}
   {{ if or .Params.math .Site.Params.math }}
-  {{ printf "<script async defer src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.mathJax.url $js.mathJax.version) $js.mathJax.sri | safeHTML }}
+  {{ printf "<script async src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.mathJax.url $js.mathJax.version) $js.mathJax.sri | safeHTML }}
   {{ end }}
 {{ end }}
 
