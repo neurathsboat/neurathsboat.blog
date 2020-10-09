@@ -137,7 +137,7 @@ ul.share li i {
 }
 
 .fab {
-  font-weight: 900;
+  font-weight: normal;
 }
 
 ul.share li a.email .fas.fa-envelope-square:before {
