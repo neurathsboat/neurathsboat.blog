@@ -3,7 +3,7 @@
 {{/* Config LaTeX math rendering. */}}
 {{ if or .Params.math .Site.Params.math }}
 {{ $mathjax_config := resources.Get "js/mathjax-config.js" }}
-<script src="{{ $mathjax_config.RelPermalink }}"></script>
+<script async defer src="{{ $mathjax_config.RelPermalink }}"></script>
 {{ end }}
 
 {{/* Attempt to load local vendor JS, otherwise load from CDN. */}}
@@ -47,7 +47,7 @@
 
   {{/* LaTeX math rendering. */}}
   {{ if or .Params.math .Site.Params.math }}
-  {{ printf "<script src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.mathJax.url $js.mathJax.version) $js.mathJax.sri | safeHTML }}
+  {{ printf "<script async defer src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.mathJax.url $js.mathJax.version) $js.mathJax.sri | safeHTML }}
   {{ end }}
 {{ end }}
 
@@ -123,8 +123,8 @@
 
 {{/* Fuse search engine. */}}
 {{ if eq .Site.Params.search.engine 1 }}
-{{ printf "<script src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.fuse.url $js.fuse.version) $js.fuse.sri | safeHTML }}
-{{ printf "<script src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.mark.url $js.mark.version) $js.mark.sri | safeHTML }}
+{{ printf "<script async defer src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.fuse.url $js.fuse.version) $js.fuse.sri | safeHTML }}
+{{ printf "<script async defer src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.mark.url $js.mark.version) $js.mark.sri | safeHTML }}
 {{ end }}
 
 {{/* Algolia search engine. */}}
