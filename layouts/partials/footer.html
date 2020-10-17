@@ -142,6 +142,24 @@
 </script>
 {{ end }}
 
+{{ if .Site.GoogleAnalytics }}
+<script type="text/plain"
+data-type="application/javascript"
+data-name="googleAnalytics">
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', '{{ .Site.GoogleAnalytics }}', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('require', 'eventTracker');
+  ga('require', 'outboundLinkTracker');
+  ga('require', 'urlChangeTracker');
+  ga('send', 'pageview');
+</script>
+<script async src="//www.google-analytics.com/analytics.js"></script>
+{{ if ($scr.Get "use_cdn") }}
+{{ printf "<script async src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.autotrack.url $js.autotrack.version) $js.autotrack.sri | safeHTML }}
+{{ end }}
+{{ end }}
+
 {{ $js_comment := printf "/* Source Themes Academic v%s | https://sourcethemes.com/academic/ */\n" .Site.Data.academic.version }}
 {{ $js_bundle_head := $js_comment | resources.FromString "js/bundle-head.js" }}
 {{ $js_academic := resources.Get "js/academic.js" }}

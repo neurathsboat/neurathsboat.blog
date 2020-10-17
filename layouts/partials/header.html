@@ -120,24 +120,6 @@
   <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">
   {{ end }}
 
-  {{ if .Site.GoogleAnalytics }}
-    <script type="text/plain"
-    data-type="application/javascript"
-    data-name="googleAnalytics">
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', '{{ .Site.GoogleAnalytics }}', 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
-      ga('require', 'urlChangeTracker');
-      ga('send', 'pageview');
-    </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
-    {{ if ($scr.Get "use_cdn") }}
-    {{ printf "<script async src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.autotrack.url $js.autotrack.version) $js.autotrack.sri | safeHTML }}
-    {{ end }}
-  {{ end }}
-
   {{ if or .Site.RSSLink .RSSLink }}
   <link rel="alternate" href="{{ .RSSLink | default .Site.RSSLink  }}" type="application/rss+xml" title="{{ .Site.Title }}">
   <link rel="feed" href="{{ .RSSLink | default .Site.RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}">
