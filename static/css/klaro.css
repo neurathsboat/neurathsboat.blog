@@ -8,6 +8,7 @@ We declare all variables here as default so that they are easy to override...
 .klaro .cookie-modal,
 .klaro .cookie-notice {
   /* The switch - the box around the slider */
+  font-family: sans-serif;
   font-size: 14px;
 }
 

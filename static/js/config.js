@@ -104,8 +104,16 @@ var klaroConfig = {
             googleAnalytics: {
                 description: 'Collecting of visitor statistics',
             },
+            hypothesis: {
+                description: 'Note-taking functionality',
+            },
             purposes: {
-                analytics: 'Analytics'
+                analytics: {
+                    title: 'Analytics'
+                },
+                functionality: {
+                    title: 'Functionality'
+                }
             },
         },
     },
@@ -120,6 +128,16 @@ var klaroConfig = {
             title: 'Google Analytics',
             purposes: ['analytics'],
             cookies: ['googleAnalytics'],
+            optOut: true,
+            required: false,
+        },
+        
+        {
+            name: 'hypothesis',
+            title: 'hypothesis',
+            purposes: ['functionality'],
+            cookies: ['hypothes.is'],
+            default: true,
             optOut: true,
             required: false,
         },

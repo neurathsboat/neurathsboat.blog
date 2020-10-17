@@ -47,6 +47,10 @@ so we can prevent their creation.
 
 If you submit a comment on any page on this website, it will be assigned an id anonymized through MD5 encryption and stored in a repository at github.com. The name associated with the comment will be publicly visible. The optional email address associated with the comment will be encrypted through the MD5 algorithm.
 
+## Hypothes.is
+
+The [hypothes.is service](https://web.hypothes.is/) is activated by default on this website. It does not set any cookies unless you choose to login to it. You can disable the hypothes.is service through our cookie manager if you like.
+
 ## SSL encryption
 
 All internal and external links on are website are through secure connections certified by [Let's Encrypt](https://letsencrypt.org/).
