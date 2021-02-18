@@ -30,7 +30,7 @@
   <form class="post-new-comment"
   method="POST"
   action="{{ .Site.Params.staticman.endpoint }}/{{ .Site.Params.staticman.username }}/{{ .Site.Params.staticman.repository }}/{{ .Site.Params.staticman.branch }}/comments">
-  <!--form class="post-new-comment" method="POST" action="http://localhost:8055/v2/entry/eduardoboucas/staticman-test/master/comments"-->
+  <!--form class="post-new-comment" method="POST" action="https://neurathsboat-blog-staticman.herokuapp.com/v3/entry/gitlab/neurathsboat.blog/comments/master/comments"-->
   <input type="hidden"
   name="options[redirect]"
   value="{{ .Permalink }}#comment-submitted">
@@ -57,9 +57,9 @@
 <div id="comment-submitted" class="dialog">
 <h3>Thank you</h3>
   <p>Your comment has been submitted and will be published once it has been approved.</p>
-  <p><a href="https://github.com/{{ .Site.Params.staticman.username }}/{{ .Site.Params.staticman.repository }}/pulls">
+  <p><a href="https://gitlab.com/{{ .Site.Params.staticman.username }}/{{ .Site.Params.staticman.repository }}/-/merge_requests">
     Click here</a>
-    to see the pull request you generated.</p>
+    to see the merge request you generated.</p>
 
   <p><a href="#" class="btn">OK</a></p>
 </div>

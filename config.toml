@@ -39,9 +39,9 @@ enableGitInfo = true
 # Enable Staticman commenting by uncommenting and entering the relevant values.
 # Be sure to comment out the disqusShortname if using Staticman.
 [params.staticman]
-endpoint = "https://api.staticman.net/v2/entry"
-username = "vkehayas"
-repository = "staticman-comments"
+endpoint = "https://neurathsboat-blog-staticman.herokuapp.com/v3/entry/gitlab"
+username = "neurathsboat.blog"
+repository = "comments"
 branch = "master"
 
 
